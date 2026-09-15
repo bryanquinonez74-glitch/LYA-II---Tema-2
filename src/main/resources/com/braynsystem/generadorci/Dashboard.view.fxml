@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.braynsystem.generadorci.controller.GCIController">
+    <top>
+
+        <VBox spacing="5" style="-fx-background-color: #111827;">
+
+            <padding>
+                <Insets bottom="20" left="25" right="25" top="20" />
+            </padding>
+
+            <Label style="                     -fx-font-size: 27px;                     -fx-font-weight: bold;                     -fx-text-fill: white;                     " text="Generador de Código Intermedio" />
+
+            <Label style="                     -fx-font-size: 14px;                     -fx-text-fill: #CBD5E1;                     " />
+
+        </VBox>
+
+    </top>
+
+    <left>
+
+        <VBox prefWidth="250" spacing="15" style="-fx-background-color: #1F2937;">
+
+            <padding>
+
+                <Insets bottom="25" left="20" right="20" top="25" />
+
+            </padding>
+            <Button onAction="#abrirNotaciones" prefHeight="42" prefWidth="210" style="         -fx-background-color: #2563EB;         -fx-text-fill: white;         -fx-font-size: 14px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="2.1 Notaciones" />
+            <Label style="                     -fx-font-size: 15px;                     -fx-text-fill: white;                     " text="2.2 Representaciones de código intermedio" wrapText="true" />
+            <Button onAction="#abrirPolaca" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 14px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Notación Polaca" />
+            <Button onAction="#abrirCodigoP" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 13px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Código P" />
+            <Button onAction="#abrirTriplos" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 13px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Triplos" />
+            <Button onAction="#abrirCuadruplos" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 13px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Cuádruplos" />
+            <Label style="                     -fx-font-size: 15px;                     -fx-text-fill: white;                     " text="2.3 Esquema de generación" wrapText="true" />
+            <Button onAction="#abrirVariables" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 12px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Variables y constantes" />
+            <Button onAction="#abrirExpresiones" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 13px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Expresiones" />
+            <Button onAction="#abrirAsignacion" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 12px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Instrucción de asignación" wrapText="true" />
+            <Button onAction="#abrirControl" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 12px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Instrucciones de control" wrapText="true" />
+            <Button onAction="#abrirFunciones" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 12px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Funciones" />
+            <Button onAction="#abrirEstructuras" prefHeight="42" prefWidth="210" style="         -fx-background-color: #374151;         -fx-text-fill: white;         -fx-font-size: 12px;         -fx-font-weight: bold;         -fx-alignment: CENTER-LEFT;         -fx-background-radius: 7px;         -fx-cursor: hand;         " text="Estructuras" />
+
+        </VBox>
+
+    </left>
+
+    <center>
+
+        <StackPane fx:id="panelContenido" style="-fx-background-color: #F3F4F6;">
+
+            <VBox alignment="CENTER" spacing="12">
+
+                <Label style="                         -fx-font-size: 28px;                         -fx-font-weight: bold;                         -fx-text-fill: #1F2937;                         " text="Generación de Código Intermedio" />
+
+            </VBox>
+
+        </StackPane>
+
+    </center>
+
+</BorderPane>

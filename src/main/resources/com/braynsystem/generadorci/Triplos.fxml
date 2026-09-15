@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.braynsystem.generadorci.controller.TriplosController"
+        spacing="18"
+        style="-fx-background-color: #F3F4F6;">
+
+    <padding>
+        <Insets
+                top="30"
+                right="35"
+                bottom="30"
+                left="35"/>
+    </padding>
+
+    <Label
+            text="Triplos"
+            style="
+            -fx-font-size: 26px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #1F2937;
+            "/>
+
+    <Label
+            text="Generación de una representación intermedia mediante triplos."
+            style="
+            -fx-font-size: 14px;
+            -fx-text-fill: #6B7280;
+            "/>
+
+    <Label
+            text="Ingresa una asignación:"
+            style="
+            -fx-font-size: 15px;
+            -fx-font-weight: bold;
+            "/>
+
+    <TextField
+            fx:id="txtExpresion"
+            prefHeight="42"/>
+
+    <HBox spacing="10">
+
+        <Button
+                text="Generar Triplos"
+                onAction="#generarTriplos"
+                prefWidth="160"
+                prefHeight="40"
+                style="
+                -fx-background-color: #2563EB;
+                -fx-text-fill: white;
+                -fx-font-weight: bold;
+                -fx-background-radius: 7px;
+                -fx-cursor: hand;
+                "/>
+
+        <Button
+                text="Limpiar"
+                onAction="#limpiar"
+                prefWidth="110"
+                prefHeight="40"
+                style="
+                -fx-background-color: #EF4444;
+                -fx-text-fill: white;
+                -fx-font-weight: bold;
+                -fx-background-radius: 7px;
+                -fx-cursor: hand;
+                "/>
+
+    </HBox>
+
+    <Label
+            fx:id="lblMensaje"
+            style="
+            -fx-font-size: 14px;
+            -fx-text-fill: #2563EB;
+            "/>
+
+    <TableView
+            fx:id="tablaTriplos"
+            prefHeight="320">
+
+        <columns>
+
+            <TableColumn
+                    fx:id="colIndice"
+                    text="#"
+                    prefWidth="70"/>
+
+            <TableColumn
+                    fx:id="colOperador"
+                    text="Operador"
+                    prefWidth="140"/>
+
+            <TableColumn
+                    fx:id="colArgumento1"
+                    text="Argumento 1"
+                    prefWidth="180"/>
+
+            <TableColumn
+                    fx:id="colArgumento2"
+                    text="Argumento 2"
+                    prefWidth="180"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

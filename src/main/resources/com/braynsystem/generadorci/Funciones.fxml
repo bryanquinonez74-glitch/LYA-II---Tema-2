@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.braynsystem.generadorci.controller.FuncionesController"
+        spacing="16"
+        style="-fx-background-color: #F3F4F6;">
+
+    <padding>
+        <Insets
+                top="25"
+                right="35"
+                bottom="25"
+                left="35"/>
+    </padding>
+
+    <Label
+            text="Funciones"
+            style="
+            -fx-font-size: 26px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #1F2937;
+            "/>
+
+    <Label
+            text="Generación de código intermedio para llamadas a funciones, parámetros y valores de retorno."
+            wrapText="true"
+            style="
+            -fx-font-size: 14px;
+            -fx-text-fill: #6B7280;
+            "/>
+
+    <Label
+            text="Ingresa una llamada a función:"
+            style="
+            -fx-font-size: 15px;
+            -fx-font-weight: bold;
+            "/>
+
+    <TextField
+            fx:id="txtFuncion"
+            prefHeight="42"
+            style="
+            -fx-font-size: 15px;
+            -fx-border-color: #D1D5DB;
+            -fx-border-radius: 7px;
+            -fx-background-radius: 7px;
+            "/>
+
+    <HBox spacing="10">
+
+        <Button
+                text="Generar"
+                onAction="#generar"
+                prefWidth="110"
+                prefHeight="40"
+                style="
+                -fx-background-color: #2563EB;
+                -fx-text-fill: white;
+                -fx-font-weight: bold;
+                -fx-background-radius: 7px;
+                -fx-cursor: hand;
+                "/>
+
+        <Button
+                text="Ejemplo Función"
+                onAction="#ejemploSimple"
+                prefWidth="140"
+                prefHeight="40"/>
+
+        <Button
+                text="Con Asignación"
+                onAction="#ejemploAsignacion"
+                prefWidth="140"
+                prefHeight="40"/>
+
+        <Button
+                text="Ejemplo RETURN"
+                onAction="#ejemploReturn"
+                prefWidth="140"
+                prefHeight="40"/>
+
+        <Button
+                text="Limpiar"
+                onAction="#limpiar"
+                prefWidth="100"
+                prefHeight="40"
+                style="
+                -fx-background-color: #EF4444;
+                -fx-text-fill: white;
+                -fx-font-weight: bold;
+                -fx-background-radius: 7px;
+                -fx-cursor: hand;
+                "/>
+
+    </HBox>
+
+    <Label
+            fx:id="lblMensaje"
+            style="
+            -fx-font-size: 14px;
+            -fx-text-fill: #2563EB;
+            "/>
+
+    <Label
+            text="Código intermedio"
+            style="
+            -fx-font-size: 15px;
+            -fx-font-weight: bold;
+            "/>
+
+    <TextArea
+            fx:id="txtResultado"
+            editable="false"
+            prefHeight="320"
+            wrapText="false"
+            style="
+            -fx-font-family: Consolas;
+            -fx-font-size: 15px;
+            "/>
+
+</VBox>
